@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: deployment
+metadata:
+  name: app-authors
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: app-authors
+  template:
+    metadata:
+      labels:
+        app: app-authors
+      spec:
+        containers:
+          - name: app-authors
+            imagen: jessicalyruiz/app-authors
+            ports:
+              - containerPort: 8080
+
