@@ -10,7 +10,7 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
   app-authors-service:
-    image: jessicalyruiz/app-authors
+    image: jaimesalvador/app-authors
     deploy:
       replicas: 3
     expose:
@@ -22,7 +22,7 @@ services:
     #ports:
     #  - "8080:8080" #HOST:CONTENEDOR
   app-books-service:
-    image: jessicalyruiz/app-books
+    image: jaimesalvador/app-books
     environment:
       APP_AUTHORS_URL: http://proxy/app-authors
     deploy:
